@@ -1,0 +1,17 @@
+bundle:
+  name: my_first_pipeline
+
+targets:
+  dev:
+    # EXACT VALUE: Copy your workspace URL up to '.net'
+    workspace:
+      host: https://dbc-7955c191-5c2c.cloud.databricks.com/?o=7474657402365275
+
+resources:
+  jobs:
+    hello_world_job:
+      name: "[CI-CD] Sample Job"
+      tasks:
+        - task_key: main_task
+          notebook_task:
+            notebook_path: ./notebook.py
